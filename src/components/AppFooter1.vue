@@ -13,7 +13,21 @@ export default {
 
 <template>
 
+    <div class="f_container">
+
+    </div>
+
+
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+
+.f_container{
+    background-image: url(../assets/img/footer-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+}
+</style>
