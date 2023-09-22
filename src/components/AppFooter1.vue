@@ -13,7 +13,6 @@ export default {
 
 <template>
 
-    <h1>ccccc</h1>
 </template>
 
 

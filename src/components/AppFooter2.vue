@@ -12,7 +12,7 @@ export default {
 
 
 <template>
-    <h1>ooooo</h1>
+
 </template>
 
 
