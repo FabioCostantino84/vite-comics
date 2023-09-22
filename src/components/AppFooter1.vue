@@ -12,11 +12,11 @@ export default {
 
 
 <template>
+
     <div class="f_container">
         <div class="w-75 m-auto row">
-            <div class=" d-flex col-6 pt-5">
-
-                
+            <div class=" d-flex col-6 mt-4">
+               
                     <div class="d-flex flex-column">
                         <h3>DC COMICS</h3>
                         <a href="">Characters</a>
@@ -54,12 +54,14 @@ export default {
                         <a href="">DC Power Visa</a>
                     </div>
 
-                
-
             </div>
 
             <div class="col-6">
-                <img src="../assets/img/dc-logo-bg.png" alt="">
+                <div class="box">
+                    
+                    <img src="../assets/img/dc-logo-bg.png" alt="">
+
+                </div>
             </div>
         </div>
 
@@ -74,6 +76,26 @@ export default {
     background-repeat: no-repeat;
     /* height: 200px; */
 }
+
+.box {
+    width: 500px;
+    height: 360px;
+    overflow: hidden;
+}
+.box > img {
+    height: 500px;
+    width: 500px;
+    margin-top: -85px;
+}
+
+/* .box{
+    width: 300px;
+}
+
+.box > img{
+    width: 100%;
+    height: auto;
+} */
 
 h3 {
     color: #ffffff;
