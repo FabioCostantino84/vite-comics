@@ -26,7 +26,11 @@ export default{
 
 <template>
 
-  <AppHeader></AppHeader>
+  <AppHeader/>
+  <AppJumbotron/>
+  <AppMainContent/>
+  <AppFooter1/>
+  <AppFooter2/>
  
 </template>
 
