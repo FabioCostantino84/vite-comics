@@ -2,6 +2,7 @@
 export default {
 
     name: "AppJumbotron",
+
     data() {
         return {
         }
@@ -12,16 +13,23 @@ export default {
 
 
 <template>
+    <div class="jumbotron">
 
-<div class="row align-items-md-stretch">
-    <div class="col">
-        <div class="h-100 p-5 text-white bg-dark">
-            <h2>Content goes here</h2>
+        <div class="container w-75 m-auto align-items-md-stretch">
+
+            <div class="py-5 text-white">
+                <h2>Content goes here</h2>
+            </div>
         </div>
-    </div>
-</div>
 
+    </div>
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+
+.jumbotron {
+    background-color: $black-color;
+}
+</style>
