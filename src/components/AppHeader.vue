@@ -2,8 +2,11 @@
 export default {
 
     name: "AppHeader",
+
     data() {
         return {
+
+            navLink: ['characters', 'comics', 'movies', 'tv', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'],
         }
     }
 }
@@ -14,7 +17,7 @@ export default {
 <template>
     <header>
 
-        <div class="container w-75 py-4">
+        <div class="container w-75 py-4 ">
             <div class="row align-items-center">
                 <div class="col-4">
 
@@ -22,13 +25,17 @@ export default {
                     <img src="../assets/img/dc-logo.png" alt="">
 
                 </div>
-                <div class="col-8 ">
+                <div class="col-8 d-flex justify-content-center">
 
                     <!-- NAVBAR -->
                     <nav class="navbar navbar-expand-sm ">
-                        <div class="container-fluid">
-                            <a class="navbar-brand" href="#">CHARACTERS</a>
-                            <a class="navbar-brand" href="#">COMICS</a>
+
+                        <!-- CICLO NELL' ARRAY -->
+                        <div v-for="link in navLink" class="container-fluid">
+                            <a class="nav-link active text-uppercase font-weight-bold align-content-center"
+                                aria-current="page" href="#">{{ link }}</a>
+
+                            <!-- <a class="navbar-brand" href="#">COMICS</a>
                             <a class="navbar-brand" href="#">MOVIES</a>
                             <a class="navbar-brand" href="#">TV</a>
                             <a class="navbar-brand" href="#">GAMES</a>
@@ -36,7 +43,7 @@ export default {
                             <a class="navbar-brand" href="#">VIDEOS</a>
                             <a class="navbar-brand" href="#">FANS</a>
                             <a class="navbar-brand" href="#">NEWS</a>
-                            <a class="navbar-brand" href="#">SHOP</a>
+                            <a class="navbar-brand" href="#">SHOP</a> -->
 
                         </div>
                     </nav>
@@ -45,12 +52,12 @@ export default {
             </div>
         </div>
 
-
-
-
-
     </header>
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.col-8 {
+    font-weight: bolder;
+}
+</style>
