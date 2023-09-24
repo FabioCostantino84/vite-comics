@@ -1,6 +1,12 @@
+/* per importare bootstrap devo prima installarlo da terminale */
+// TERMINALE: npm i --save bootstrap @popperjs/core
 @use "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
-$primary:#303030;
-$light: #ffffff;
-$secondary:  #0282f9;
-$dark: #1c1c1c;
+/* variabili */
+@use '../scss/partials/variables.scss' as *;
+
+
+/* common */
+body {
+  background-color: $white-color;
+}

@@ -1,20 +1,22 @@
 <script>
-import AppFooter1 from './components/AppFooter1.vue';
-import AppFooter2 from './components/AppFooter2.vue';
 import AppHeader from './components/AppHeader.vue';
 import AppJumbotron from './components/AppJumbotron.vue';
-import AppMainContent from './components/AppMainContent.vue';
+import AppMainMenu from './components/AppMainMenu.vue';
+import AppFooter1 from './components/AppFooter1.vue';
+import AppFooter2 from './components/AppFooter2.vue';
 
 export default{
+
+  name: 'App',
   data(){
     return{
 
     }
   },
-  components: {
+  components: {  // ogni import che faccio vanno inseriti nei components
     AppHeader,
     AppJumbotron,
-    AppMainContent,
+    AppMainMenu,
     AppFooter1,
     AppFooter2,
   }
@@ -28,7 +30,7 @@ export default{
 
   <AppHeader/>
   <AppJumbotron/>
-  <AppMainContent/>
+  <AppMainMenu/>
   <AppFooter1/>
   <AppFooter2/>
  
@@ -36,6 +38,8 @@ export default{
 
 
 
-<style>
+<style lang="scss" scoped>
+
+@use './assets/scss/partials/variables.scss' as *;
 
 </style>

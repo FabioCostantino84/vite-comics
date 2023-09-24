@@ -57,6 +57,8 @@ export default {
 
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+
 .col-8 {
     font-weight: bolder;
 }
