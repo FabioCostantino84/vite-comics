@@ -39,8 +39,9 @@ export default {
         <div class="container w-75">
             <div class="row">
                 <div class="col-12 d-flex align-items-center justify-content-between">
-                    <div class="bottone">
-                        <button>SIGN-UP-NOW!</button>
+                    <div class="f_btn">
+                        <a href="#" class="text-white text-uppercase text-decoration-none" role="button"
+                            data-bs-toggle="button">sing-up now!</a>
                     </div>
 
                     <div class="d-flex align-items-center p-5">
@@ -74,5 +75,10 @@ footer {
 h4 {
     color: $primary-color;
     padding: 1rem;
+}
+
+.f_btn {
+    padding: 1rem;
+    border: 0.25rem solid $primary-color;
 }
 </style>
