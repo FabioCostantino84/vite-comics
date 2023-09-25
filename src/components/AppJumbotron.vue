@@ -17,12 +17,14 @@ export default {
 <template>
     <div class="jumbotron">
 
-        <div class="container text-center ">
+        <div class="imgContainer"></div>
+
+        <div class="container text-center py-5">
             <div class="row row-cols-6">
-                <div v-for="card in cards.cards" class="card flex-nowrap bg-black">
-                    <img :src="card.thumb" class="card-img-top" alt="...">
+                <div v-for="card in cards.cards" class="card flex-nowrap bg-black py-3">
+                    <img :src="card.thumb" class="imgSeries" alt="...">
                     <div class="card-body">
-                        <h4 class="card-text text-white">{{ card.series }}</h4>
+                        <h4 class="card-text text-white text-start">{{ card.series }}</h4>
                     </div>
                 </div>
             </div>
@@ -45,9 +47,15 @@ export default {
 .jumbotron {
     background-color: $black-color;
 }
-.card>img{
-    width: 100%;
 
-    aspect-ratio: 1/1;
+.imgContainer {
+    background-image: url(../assets/img/jumbotron.jpg);
+   height: 450px;
+   background-size: cover;
+
+}
+
+.imgSeries {
+    height: 200px;
 }
 </style>
