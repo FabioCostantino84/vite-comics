@@ -4,6 +4,7 @@ export default {
     name: "AppFooter1",
     data() {
         return {
+
         }
     }
 }
@@ -75,6 +76,8 @@ export default {
 
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+
 .f_container {
     background-image: url(../assets/img/footer-bg.jpg);
     background-size: cover;

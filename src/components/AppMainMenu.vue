@@ -42,7 +42,7 @@ export default {
             <div class="d-flex flex-nowrap align-items-center align-content-between">
                 <div v-for="card in menuCards" class="d-flex align-items-center">
 
-                    <img :src="card.image" class="d-flex p-1">
+                    <img :src="card.image" class="d-flex p-2">
 
                     <div class="text-white text-uppercase" style="">{{ card.text }}</div>
                 </div>
