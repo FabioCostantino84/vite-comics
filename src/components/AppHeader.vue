@@ -63,6 +63,10 @@ export default {
     font-weight: bolder;
 }
 
+a{
+    color: $primary-color;
+}
+
 a:hover{
     border-bottom: 3px solid $primary-color;
     color: $primary-color;
