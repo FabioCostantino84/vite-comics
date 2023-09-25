@@ -1,14 +1,18 @@
 <script>
-import cards from '../card.js'
+import cardsArray from '../dataJs/card.js'
+import seriesItem from './seriesItem.vue';
 export default {
 
     name: "AppJumbotron",
+    components: {
+        seriesItem,
+    },
 
     data() {
         return {
-            cards,
+            cardsArray,
         }
-    }
+    },
 }
 
 </script>
@@ -17,24 +21,27 @@ export default {
 <template>
     <div class="jumbotron">
 
-        
+
         <div class="imgContainer"></div>
-        
+
         <div class="j_btn_top">
-                <a href="#" class="text-white text-uppercase text-decoration-none fs-4" role="button" data-bs-toggle="button">current series</a>
-            </div>
-        
+            <a href="#" class="text-white text-uppercase text-decoration-none fs-4" role="button"
+                data-bs-toggle="button">current series</a>
+        </div>
+
         <div class="container text-center py-3">
+
             <div class="row row-cols-6">
-                <div v-for="card in cards.cards" class="card flex-nowrap bg-transparent py-3">
-                    <img :src="card.thumb" class="imgSeries" alt="...">
-                    <div class="card-body">
-                        <h4 class="card-text text-white text-start">{{ card.series }}</h4>
-                    </div>
+
+                <seriesItem :image="card.thumb" :title="card.series" :cardsArray="cardsArray" :cards="cardsArray.cards"
+                    v-for="(card, index) in cardsArray.cards"></seriesItem>
+
+
+                <div class="j_btn m-auto">
+                    <a href="#" class="text-white text-uppercase text-decoration-none" role="button"
+                        data-bs-toggle="button">load more</a>
                 </div>
-            </div>
-            <div class="j_btn m-auto">
-                <a href="#" class="text-white text-uppercase text-decoration-none" role="button" data-bs-toggle="button">load more</a>
+
             </div>
         </div>
 
@@ -65,7 +72,7 @@ export default {
     height: 200px;
 }
 
-.j_btn_top{
+.j_btn_top {
     padding: 1rem;
     background-color: $primary-color;
     width: 15%;
@@ -81,5 +88,4 @@ export default {
     background-color: $primary-color;
     width: 20%;
     font-weight: bold;
-}
-</style>
+}</style>
