@@ -17,7 +17,7 @@ export default {
 <template>
     <header>
 
-        <div class="container w-75 py-4 ">
+        <div class="container w-75">
             <div class="row align-items-center">
                 <div class="col-4">
 
@@ -61,5 +61,11 @@ export default {
 
 .col-8 {
     font-weight: bolder;
+}
+
+a:hover{
+    border-bottom: 3px solid $primary-color;
+    color: $primary-color;
+
 }
 </style>
